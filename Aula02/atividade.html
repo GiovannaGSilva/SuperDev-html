@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetAmigo</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            PetAmigo
+        </h1>
+
+        <br>
+
+        <h2>Bem-Vindo ao nosso pet shop PetAmigo!</h2>
+
+        <h2>Agendamento</h2>
+
+        <nav>
+            <a href="./index.html">Inicío</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <form>
+            <p>
+                <label for="nome">Nome:</label>
+                <br>
+                <input type="text" name="nome" id="nome" minlength="3" maxlength="100" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+            </p>
+
+            <p>
+                <label for="telefone">Telefone:</label>
+                <br>
+                <input type="tel" name="telefone" id="telefone" placeholder="" required>
+            </p>
+
+            <p>
+                <label for="nome">Nome do animal:</label>
+                <br>
+                <input type="text" name="nome" id="nome" minlength="3" maxlength="100" required>
+            </p>
+
+            <p>
+                <label for="Espécie">Espécie:</label>
+                <select id="especie" name="especie">
+                    <option>Cachorro</option>
+                    <option>Gato</option>
+                    <option>Ave</option>
+                    <option>Outro</option>
+                </select>
+            </p>
+
+            <p>
+            <h3>Porte do animal</h3>
+            <label for="grande">Grande</label>
+            <input type="radio" name="grande" id="grande" value="grande">
+
+            <label for="Pequeno">Pequeno</label>
+            <input type="radio" name="pequeno" id="pequeno" value="pequeno">
+
+            <label for="medio">Médio</label>
+            <input type="radio" name="medio" id="medio" value="medio">
+            </p>
+
+
+            <p>
+            <h2>Serviços desejados</h2>
+
+            <label>Banho</label>
+            <input type="checkbox" value="Banho">
+
+            <label>Tosa</label>
+            <input type="checkbox" value="Tosa">
+
+            <label>Corte de unhas</label>
+            <input type="checkbox" value="Corte de unhas">
+
+            <label>Hidratação</label>
+            <input type="checkbox" value="Hidratação">
+
+            </p>
+
+            <p>
+                <label for="Data desejada">Data desejada</label>
+                <br>
+                <input type="date" name="data-desejada" id="data-desejada">
+            </p>
+
+
+
+            <p>
+                <input type="time" name="time" id="time">
+            </p>
+
+            <button>
+                Enviar
+            </button>
+        </form>
+    </main>
+
+</body>
+
+</html>
