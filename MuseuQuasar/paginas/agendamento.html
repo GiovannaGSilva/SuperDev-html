@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento | Museu Quasar</title>
+</head>
+<body>
+
+    <header>
+        <h1>Agende sua visita ao Museu Quasar</h1>
+
+        <p>
+            Estamos felizes com seu interesse em conhecer nosso museu!
+            Preencha o formulário abaixo para simular seu agendamento.
+        </p>
+    </header>
+
+    <main>
+
+        <form>
+
+            <!-- GRUPO A: DADOS DO VISITANTE -->
+
+            <fieldset>
+                <legend>Dados do visitante</legend>
+
+                <label for="nome">Nome completo:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    minlength="3"
+                    maxlength="80"
+                    required
+                >
+
+                <br><br>
+
+                <label for="email">E-mail:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exemplo@email.com"
+                    required
+                >
+
+                <br><br>
+
+                <label for="telefone">Telefone de contato (opcional):</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                >
+
+                <br><br>
+
+                <label for="convite">Código de convite:</label>
+                <input
+                    type="text"
+                    id="convite"
+                    name="convite"
+                    placeholder="ABC-123"
+                    pattern="[A-Z]{3}-[0-9]{3}"
+                    title="Digite três letras maiúsculas, um hífen e três números. Exemplo: SOL-123"
+                    required
+                >
+
+            </fieldset>
+
+            <br>
+
+            <!-- GRUPO B: INFORMAÇÕES DA VISITA -->
+
+            <fieldset>
+                <legend>Informações da visita</legend>
+
+                <label for="data">Data da visita:</label>
+                <input
+                    type="date"
+                    id="data"
+                    name="data"
+                    required
+                >
+
+                <br><br>
+
+                <label for="horario">Horário preferido:</label>
+                <input
+                    type="time"
+                    id="horario"
+                    name="horario"
+                    required
+                >
+
+                <br><br>
+
+                <label for="quantidade">Quantidade de visitantes (1 a 5):</label>
+                <input
+                    type="number"
+                    id="quantidade"
+                    name="quantidade"
+                    min="1"
+                    max="5"
+                    required
+                >
+
+                <br><br>
+
+                <p>Tipo de visita:</p>
+
+                <input
+                    type="radio"
+                    id="individual"
+                    name="tipo_visita"
+                    value="individual"
+                    required
+                >
+                <label for="individual">Individual</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="familia"
+                    name="tipo_visita"
+                    value="familia"
+                >
+                <label for="familia">Família</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="escolar"
+                    name="tipo_visita"
+                    value="grupo_escolar"
+                >
+                <label for="escolar">Grupo escolar</label>
+
+                <br><br>
+
+                <p>Áreas de interesse:</p>
+
+                <input
+                    type="checkbox"
+                    id="dinossauros"
+                    name="interesses"
+                    value="dinossauros"
+                >
+                <label for="dinossauros">Dinossáuros</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="oceanos"
+                    name="interesses"
+                    value="oceanos"
+                >
+                <label for="oceanos">Oceanos</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="natureza"
+                    name="interesses"
+                    value="natureza"
+                >
+                <label for="natureza">Natureza</label>
+
+            </fieldset>
+
+            <br>
+
+            <!-- GRUPO C: PREFERÊNCIAS E CONFIRMAÇÃO -->
+
+            <fieldset>
+                <legend>Preferências e confirmação</legend>
+
+                <label for="exposicao">Exposição principal desejada:</label>
+
+                <select id="exposicao" name="exposicao" required>
+                    <option value="">Selecione...</option>
+                    <option value="dinossauros">Dinossáuros</option>
+                    <option value="oceanos">Oceanos</option>
+                    <option value="Natureza">Natureza</option>
+                </select>
+
+                <br><br>
+
+                <label for="observacoes">Observações:</label>
+
+                <br>
+
+                <textarea
+                    id="observacoes"
+                    name="observacoes"
+                    rows="5"
+                    cols="40"
+                    maxlength="300"
+                    placeholder="Escreva suas observações (máximo 300 caracteres)"
+                ></textarea>
+
+                <br><br>
+
+                <label for="interesse">Quanto você está animado para visitar o museu? (0 a 10)</label>
+
+                <br>
+
+                <input
+                    type="range"
+                    id="interesse"
+                    name="interesse"
+                    min="0"
+                    max="10"
+                    value="5"
+                >
+
+                <br><br>
+
+                <input
+                    type="checkbox"
+                    id="confirmacao"
+                    name="confirmacao"
+                    value="sim"
+                    required
+                >
+
+                <label for="confirmacao">
+                    Confirmo que os dados utilizados são fictícios
+                    e que este agendamento é apenas uma demonstração.
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            <!-- BOTÕES -->
+
+            <button type="submit">Enviar formulário</button>
+
+            <button type="reset">Limpar formulário</button>
+
+        </form>
+
+        <aside>
+            <h2>Importante!</h2>
+
+            <p>
+                Este formulário é apenas uma demonstração acadêmica.
+                Nenhum agendamento real será realizado e nenhum dado
+                será armazenado pelo Museu Quasar.
+                Utilize somente informações fictícias para os testes.
+            </p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Museu Quasar. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
